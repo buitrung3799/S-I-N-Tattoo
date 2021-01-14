@@ -1,0 +1,134 @@
+.Gallery {
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-family: Gothic;
+}
+.banner {
+    color: white;
+    height: 300px;
+    box-sizing: border-box;
+    position: relative;
+}
+.banner > .text {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.banner > .text > h1{
+    font-size: 50px;
+    font-family: Gothic;
+    font-weight: normal;
+}
+.arms-gallery {
+    
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.arms-gallery > h1 {
+    font-size: 40px;
+    margin-top: 10rem;
+}
+.arm-row-images {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 550px;
+    visibility: hidden;
+}
+.arm-row-images.animated {
+    visibility: visible;
+    animation-name: fadeInRight;
+    animation-duration: 1s;
+    animation-delay: 0.75s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+@keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.body-row-images {
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 550px;
+}
+.body-row-images.animated {
+    visibility: visible;
+    animation-name: fadeInRight;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+.arm-images{
+    flex: 1;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 520px;
+}
+.arm-images:hover{
+    cursor: pointer;
+    transform: scale(1.09 , 1.09);
+    transition: transform 0.6s ease;
+    filter: blur(1.5px);
+}
+.body-gallery{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    margin-top: 50px;
+}
+.body-gallery > h1 {
+    font-size: 40px;
+    margin-top: 10rem;
+}
+.image-links {
+    width: 100%;
+    height: 530px;
+    position: relative;
+}
+.image-links .description{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+.image-links:hover .description{
+    visibility: visible;
+}
+.body-images{
+    flex: 1;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 520px;
+}
+.body-images:hover{
+    cursor: pointer;
+    transform: scale(1.09,1.09);
+    transition: transform 0.6s ease;
+    filter:blur(1.5px);
+}
